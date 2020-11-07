@@ -1,0 +1,854 @@
+@charset "utf-8";
+/*common.css*/
+
+html,
+body {
+    font-family: Lato, Lucida Grande, Tahoma, Sans-Serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/*이탈리체*/
+.em {
+    font-style: italic;
+}
+
+/* 흰색 글자 */
+.vt {
+    color: #fff;
+}
+
+/*헤더 영역*/
+
+.top {
+    height: 118px;
+    z-index: 99999;
+}
+
+
+/*헤더 공통*/
+#top {
+    z-index: 99999;
+    height: 118px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    height: 118px;
+    transition: all .5s ease-out;
+    display: flex;
+
+}
+
+
+/*헤더 flex*/
+.navi_area {
+    display: flex;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    right: 48px;
+    margin-top: 44px;
+}
+
+
+
+/*lnb 영역*/
+.lnb {
+    display: flex;
+    height: 28px;
+    transition: all .5s ease-out;
+}
+
+
+.lnb a {
+    font-size: 1.125rem;
+    padding: 0 15px;
+}
+
+
+/*홈으로 돌아가기*/
+.home_back img {
+    width: 14px;
+    height: 14px;
+}
+
+.home_back {
+    position: relative;
+}
+
+.home_back::after {
+    content: '';
+    position: absolute;
+    background-color: #a8b8a9;
+    height: 5px;
+    width: 20px;
+    text-outline: 20px;
+    left: 12px;
+    top: 24px;
+    display: block;
+}
+
+/*상점아이콘*/
+.shop_over {
+    opacity: 0;
+    position: absolute;
+}
+
+.shop_out {
+    position: absolute;
+}
+
+.shopping_icon {
+    margin: 0 24px 0 8px;
+    padding: 0 15px;
+    display: inline-block;
+    /*border: 1px solid red;*/
+    height: 18px;
+    width: 16px;
+    position: relative;
+}
+
+.shopping_icon img {
+    width: 16px;
+    height: 18px;
+    transition: all .5s ease-out;
+}
+
+.shopping_icon:hover .shop_over {
+    opacity: 1;
+}
+
+.shopping_icon:hover .shop_out {
+    opacity: 0;
+}
+
+
+
+/*로고*/
+.header_logo {
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.topimg {
+    width: 176px;
+    height: 54px;
+}
+
+/*lnb*/
+.lnb {
+    position: relative;
+    transition: all .5s ease-out;
+}
+
+.txt_over {
+    display: block;
+}
+
+
+.txt_over:hover,
+.txt_over {
+    transition: all .5s ease-out;
+}
+
+.txt_over:hover {
+    color: #a8b8a9;
+    transform: translateY(-1px);
+}
+
+/****************버튼*******************/
+
+
+.menu_toggle {
+    margin: 0;
+    padding: 0;
+    width: 52px;
+    height: 24px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: 0;
+    margin-right: 24px;
+    transition: all .5s ease-out;
+}
+
+.ham {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.ham span {
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 2px;
+    transition: margin 0.25s 0.25s, transform 0.25s;
+}
+
+.ham .bar1 {
+    margin-bottom: 8px;
+}
+
+.ham .bar2 {
+    margin: 0;
+}
+
+.ham .bar3 {
+    margin-top: 8px;
+}
+
+.ham.active span {
+    transition: all 0.25s, transform 0.25s 0.25s;
+}
+
+.ham.active .bar1 {
+    transform: rotate(135deg);
+    margin-top: 11px;
+}
+
+.ham.active .bar2 {
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.ham.active .bar3 {
+    margin-top: -11px;
+    transform: rotate(225deg);
+}
+
+/***************스크롤 시******************/
+
+
+.scroll {
+    height: 128px;
+    transition: all .5s ease-out;
+    background-color: transparent;
+    /*border: 1px solid red;*/
+
+}
+
+/*전체박스 좌측 이동*/
+.scroll .navi_area {
+    transition: all .5s ease-out;
+    padding-top: 10px;
+}
+
+/*스크롤 lnb 이동*/
+.scroll .lnb {
+    opacity: 0;
+    transition: all .5s ease-out;
+    /*padding-top: 11%;*/
+    box-sizing: border-box;
+}
+
+
+.scroll .shopping_icon {
+    transition: all .5s ease-out;
+    height: 18px;
+    margin-right: 44px;
+}
+
+.scrollimg {
+    /*로고 2*/
+    height: 62px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .5s ease-out;
+}
+
+/***************스크롤 시 끝******************/
+
+
+
+
+/*hover시 이미지 박스*/
+.out_img,
+.pro_out_img1,
+.pro_out_img2,
+.pro_out_img3,
+.pro_out_img4 {
+    display: block;
+}
+
+.hover_img,
+.pro_hover_img1,
+.pro_hover_img2,
+.pro_hover_img3,
+pro_out_img4 {
+    display: none;
+}
+
+
+
+
+
+
+
+/***************** 햄버거 버튼 클릭 화면 시작 **********************/
+/*버튼클릭시 나오는 화면*/
+.table_cont {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: #fff;
+    /*z-index: 99;*/
+    display: none;
+    overflow: hidden;
+}
+
+/*메뉴리스트 글자변경*/
+.table_list {
+    width: 350px;
+    margin-left: 22.5%;
+    padding-top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.table_cont li {
+    width: 100%;
+    padding: 9px 15px;
+}
+
+
+.table_cont li > a,
+.table_cont li > a:hover {
+    transition: all .5s ease-out;
+}
+
+
+/*목차 호버시*/
+.table_list li > a {
+    font-size: 4rem;
+    color: #2c2733;
+    width: 100%;
+    display: block;
+    margin: 0 0 8px;
+    padding: 0 4.8px;
+
+}
+
+/*첫번째 목차 : 혼자 다름*/
+.table_cont li:first-child > a {
+    padding-bottom: 8px;
+    border-bottom: 5px solid #a8b8a9;
+}
+
+/*첫번째 목차 호버시 : 혼자 다름*/
+.table_cont li:first-child > a:hover {
+    color: #a8b8a9;
+}
+
+/* 나머지 목차 호버 */
+.table_cont li:nth-child(2) > a:hover,
+.table_cont li:nth-child(3) > a:hover,
+.table_cont li:nth-child(4) > a:hover,
+.table_cont li:nth-child(5) > a:hover,
+.table_cont li:nth-child(6) > a:hover {
+    transform: translateY(-1px);
+    color: #a8b8a9;
+}
+
+/***************** 햄버거 버튼 클릭 화면 종료 **********************/
+
+
+
+
+
+
+
+
+
+
+/**************소개페이지 시작****************/
+
+.intro_box {}
+
+.sawmill_intro {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0 15px;
+    height: auto;
+}
+
+/*소개글 로고*/
+.sawmill_img {
+    height: 202px;
+    width: 100%;
+    text-align: center;
+}
+
+.sawmill_img img {
+    width: 578px;
+    height: 100%;
+}
+
+/*소개글 문단*/
+.sawmill_intro p {
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.7vw;
+}
+
+/*소개글 빈칸*/
+.blank_p {
+    height: 48px;
+}
+
+/*Cochran’s Lumber 바로가기*/
+.go_Lumber {
+    color: #a8b8a9;
+}
+
+.intro_first_text {}
+
+/**************소개페이지 종료****************/
+
+
+/* 미디어쿼리 헤더 */
+
+@media screen and (max-width: 990px) {
+
+    .top.page {
+        margin-bottom: 0;
+    }
+
+    /*헤더 높이 변경*/
+    .top {
+        height: 84px;
+    }
+
+    .header {
+        height: 84px;
+    }
+
+    #top {
+        height: 84px;
+        position: relative;
+    }
+
+    /*lnb 제거*/
+    .lnb {
+        display: none;
+    }
+
+    /*로고 변경*/
+    .topimg {
+        display: none;
+    }
+
+    .topimg {
+        width: 120px;
+        height: 36px;
+    }
+
+    /*좌측 아이콘 중앙정렬*/
+    .navi_area {
+        margin-top: 30px;
+    }
+
+    /*위치이동*/
+    .header_logo {
+        left: 16px;
+    }
+
+    .navi_area {
+        right: 16px;
+    }
+
+    /*쇼핑 이미지 위치 이동*/
+    .shopping_icon {
+        margin: 0px 15px 0 8px;
+        padding: 2px 8px;
+        border: 0;
+
+    }
+
+    .table_cont {
+        box-sizing: border-box;
+    }
+
+    .table_list {
+        margin: 0 auto;
+        width: 350px;
+        transform: none;
+        box-sizing: border-box;
+        padding-top: 25%;
+    }
+
+    .table_list > li > a {
+        font-size: 3rem;
+    }
+
+}
+
+
+
+/*****************푸터 영역 시작****************/
+
+
+/*박스*/
+.guarantee_more {
+    margin-bottom: 256px;
+    text-align: center;
+    padding-top: 96px;
+    height: 185px;
+    box-sizing: border-box;
+}
+
+/*Our guarantee 큰글자*/
+.guarantee_more h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+
+
+}
+
+/*부설명*/
+.guarantee_more > span {
+    display: block;
+    font-weight: 100;
+    margin-bottom: 16px;
+}
+
+
+/*아래 전체목차 박스*/
+.footer {
+    width: 100%;
+    padding: 128px 0;
+    /*outline: 1px dotted #000;*/
+}
+
+/*첫번째 푸터박스*/
+.footer_navi {
+    display: flex;
+    width: 100%;
+    height: 205px;
+}
+
+/*푸터 좌측 로고 박스*/
+.footer_logo {
+    width: 50%;
+    padding: 0;
+}
+
+/*푸터 좌측 로고 이미지*/
+.footer_logo img {
+    width: 151px;
+    height: 127px;
+}
+
+/*푸터 우측*/
+.footer_contents {
+    width: 50%;
+    display: flex;
+    text-align: right;
+}
+
+/*푸터 우측 메뉴*/
+.menu_contents {
+    width: 50%;
+    position: relative;
+    /*부모*/
+}
+
+/******메뉴 리스트******/
+.menu_list {
+    width: 153px;
+    position: absolute;
+    /*자식*/
+    right: 0;
+    top: 0;
+}
+
+.menu_list li {
+    padding: 0 15px;
+}
+
+/*메뉴 리스트 a 공통*/
+.menu_list a,
+.menu_list a:hover {
+    transition: all .5s ease-in-out;
+}
+
+.menu_list a {
+    display: block;
+    color: #2c2733;
+    padding: 0 16px;
+    font-size: 1.125rem;
+}
+
+/*메뉴 리스트 오버시*/
+.menu_list a:hover {
+    color: #a8b8a9;
+    transform: translateY(-1px);
+}
+
+/*푸터 우측 SNS*/
+.sns_contents {
+    width: 50%;
+    padding: 0 15px;
+}
+
+/*SNS 리스트*/
+.sns_list a {
+    color: #a8b8a9;
+
+}
+
+/*SNS 리스트 오버시*/
+.sns_list a:hover {
+    color: #7e967f;
+    text-decoration: underline;
+}
+
+
+/*두번째 푸터박스*/
+.add_contents {
+    width: 100%;
+    display: flex;
+}
+
+/*판권(두번째 푸터박스 1)*/
+.all_rights_reserved {
+    width: 50%;
+    margin-bottom: 16px;
+    padding: 0 30px;
+}
+
+/*웹사이트 바로가기 박스(두번째 푸터박스 2)*/
+.go_website {
+    width: 50%;
+    margin: 24px 0;
+    font-size: 0.625rem;
+    padding: 0 15px;
+    text-align: right;
+    /*outline: 1px solid blue;*/
+}
+
+/*웹사이트 바로가기 클릭 버튼*/
+.shortcuts {
+    display: inline-block;
+    padding: 1px 5px;
+    margin-left: 7px;
+    border-radius: 3px;
+    font-size: 0.625rem;
+    background-color: #000;
+    color: #fff;
+}
+
+/*웹사이트 바로가기 호버시*/
+.shortcuts:hover {
+    text-decoration: underline;
+
+}
+
+
+/*****************푸터 영역 종료****************/
+
+
+
+/* 푸터 미디어 쿼리 */
+@media screen and (max-width: 990px) {
+    .combtn {
+        padding: 0;
+    }
+
+    /*소개글*/
+    #ha .inbox3 {
+        width: 100%;
+    }
+
+    .sawmill_intro {
+        padding: 0 3%;
+    }
+
+    .sawmill_intro p {
+        font-size: 2vw;
+    }
+
+
+    .cont7 {
+        padding: 128px 0 128px 0;
+        height: auto;
+    }
+
+    .footer {
+        padding: 0;
+    }
+
+    footer.page {
+        height: auto;
+    }
+
+
+
+    #info.info {
+        height: auto;
+    }
+
+    .guarantee_more {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .guarantee_more h2 {
+        font-size: 3.1rem;
+    }
+
+    .footer_logo {
+        width: 100%;
+        padding: 0 1rem;
+        text-align: center;
+        padding-right: 2%;
+        box-sizing: border-box;
+        padding-top: 3rem;
+    }
+
+
+    .footer_logo img {
+        width: 100px;
+        height: 83px;
+    }
+
+
+
+    .add_contents {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+
+
+    .all_rights_reserved {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+
+    .footer_navi {
+        display: block;
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+
+    .footer_contents {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+
+    .menu_contents {
+        width: 100%;
+        position: static;
+        padding-bottom: 3rem;
+    }
+
+    .menu_list {
+        width: 100%;
+        position: static;
+        right: 0;
+        top: 0;
+        text-align: center;
+    }
+
+    .sns_contents {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+
+
+    .go_website {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        margin: 1.5rem 0;
+        margin-bottom: 48px;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    /**************헤더*********************/
+    .sawmill_intro p {
+        height: auto;
+    }
+
+    /****************푸터*******************/
+    .sawmill_img img {
+        width: 75.4VW;
+        height: 26.4VW;
+    }
+
+    .guarantee_more h2 {
+        font-size: 6.9vw;
+    }
+
+    .blank_p {
+        display: none;
+    }
+
+    .sawmill_intro p {
+        font-size: 2.6vw;
+    }
+
+    .sawmill_intro {
+        padding: 0 5%;
+    }
+
+    .sawmill_intro p {
+        font-size: 19.2px;
+    }
+
+    .menu_list li {
+        padding-bottom: 0.3rem;
+    }
+
+    .menu_list a {
+        font-size: 0.875rem;
+    }
+
+
+    .sns_list li {
+        padding-bottom: 0.3rem;
+    }
+
+
+
+
+}

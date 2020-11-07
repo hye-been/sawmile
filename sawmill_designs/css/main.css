@@ -1,0 +1,790 @@
+@charset "utf-8";
+/*main.css*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: big-caslon-fb, Palatino Linotype, Palatino, Palladio, URW Palladio L, Book Antiqua, Baskerville, Bookman Old Style, Bitstream Charter, Nimbus Roman No9 L, Garamond, Apple Garamond, ITC Garamond Narrow, New Century Schoolbook, Century Schoolbook, Century Schoolbook L, Georgia, serif;
+}
+
+/*첫 페이지 영역*/
+.ban {
+    height: calc(100% - 118px);
+    /*outline: 1px dotted red;*/
+}
+
+/*메인 영상*/
+.main_video_area {
+    position: relative;
+    /*부모*/
+    height: calc(100% - 174px);
+    width: 100%;
+    /*outline: 1px dotted red;*/
+    background: #2c2733;
+}
+
+.main_video_area video {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*메인배너 영상 텍스트 박스*/
+.main_video_text_box {
+    position: absolute;
+    /*자식*/
+    /*border: 1px solid #000;*/
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 16.66%;
+    width: 40%;
+    height: auto;
+    color: #fff;
+}
+
+/*텍스트 박스 큰제목*/
+.main_video_text_box h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/*비디오 대체 애니메이션 박스*/
+/*애니메이션박스*/
+#ani {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+/*장면이미지*/
+#ani li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: var extracted1=center;
+    background-size: cover;
+}
+
+/****************** 영상 아래 목차 시작 ************************/
+.our_pro_area {
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    padding: 3rem 0.5rem;
+    box-sizing: border-box;
+}
+
+/*our products 전체ul*/
+.our_pro {
+    /*outline: 1px dotted red;*/
+    display: flex;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #000;
+    transition: all .3s ease;
+    height: 78px;
+
+}
+
+.our_pro li {
+    /*border: 1px dotted red;*/
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.our_pro > li > h4 {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+
+    padding-top: 23px;
+
+}
+
+.our_pro li:nth-child(1) {
+    position: relative;
+}
+
+.our_pro li:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    right: 0;
+    width: 2px;
+    height: 50px;
+    background-color: #707070;
+    transform: rotate(15deg) translateY(-50%);
+}
+
+
+
+.our_pro li:nth-child(3) span {
+    padding-top: 12px;
+}
+
+.our_pro li:nth-child(4) span {
+    padding-top: 5px;
+}
+
+.ourpro_3 {
+    padding: 0 0 8px 0;
+}
+
+
+
+
+
+
+/*barn-wood paneling*/
+.ourpro_1 {
+    width: 255px;
+    height: 35px;
+
+    box-sizing: border-box;
+}
+
+.ourpro_img1 img {
+    width: 81.3px;
+    height: 34.88px;
+}
+
+/*Sliding Barn Doors*/
+.ourpro_2 {
+    width: 227px;
+    height: 62px;
+
+    box-sizing: border-box;
+}
+
+.ourpro_img2 img {
+    width: 68.66px;
+    height: 62.03px;
+}
+
+/*Wooden Box Beams*/
+.ourpro_3 {
+    width: 249px;
+    height: 48px;
+
+    box-sizing: border-box;
+}
+
+.ourpro_img3 img {
+    width: 78px;
+    height: 48px;
+}
+
+/*이미지 이동 마진*/
+.ourpro_img1 img,
+.ourpro_img2 img,
+.ourpro_img3 img {
+    margin-right: 16px;
+}
+
+
+
+/*ul>li*/
+.our_pro li {
+    padding: 8px 0;
+    position: relative;
+    transition: all .5s ease;
+    width: 20%;
+    box-sizing: border-box;
+
+}
+
+/*li>a*/
+.ourpro_li > a {
+    color: #a8b8a9;
+    display: flex;
+    transition: all .3s ease;
+    box-sizing: border-box;
+    padding: 8px 0;
+}
+
+/*오버시 이미지 변경*/
+.ourpro_li > a:hover .pro_hover_img1,
+.ourpro_li > a:hover .pro_hover_img2,
+.ourpro_li > a:hover .pro_hover_img3 {
+    display: block;
+    transition: all .3s ease;
+}
+
+/*아웃시 이미지 변경*/
+.ourpro_li > a:hover .pro_out_img1,
+.ourpro_li > a:hover .pro_out_img2,
+.ourpro_li > a:hover .pro_out_img3 {
+    display: none;
+    transition: all .3s ease;
+}
+
+/* 오버시 글자색 변경 */
+.onpro span {
+    color: #7e967f;
+    transition: all .3s ease;
+}
+
+/* 오버시 패딩 변경 */
+.onpro .ourpro_img1,
+.onpro .ourpro_img2,
+.onpro .ourpro_img3 {
+    left: 10px;
+}
+
+/* 기본 위치 */
+.ourpro_img1,
+.ourpro_img2,
+.ourpro_img3 {
+    transition: all .3s ease;
+    position: relative;
+    left: 0px;
+}
+
+
+
+/****************** 영상 아래 목차 종료 ************************/
+
+
+/******************** 컨텐츠 내용 시작 ********************/
+/* 컨텐츠 공통 큰 박스 */
+
+/* flex 박스 감싸기 */
+.backgroud_box {
+    padding: 48px 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    /*outline: 3px dotted red;*/
+}
+
+/* flex 박스 */
+.flex_box {
+    display: flex;
+    box-sizing: border-box;
+    padding: 128px 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    /*플랙스 뒤집기*/
+}
+
+.img_divi {
+    display: flex;
+}
+
+.divi {
+    position: relative;
+    /*background-color: aquamarine;*/
+    height: 100%;
+    width: 100%;
+    top: -5%;
+}
+
+
+
+/* 이미지박스 왼쪽 큰 부분 이동*/
+.imlb {
+    left: 14%;
+    /*    transform: translateX(-50%);*/
+}
+
+/* 이미지박스 오른쪽 큰 부분 이동*/
+.imrb {
+    left: 0;
+}
+
+/************* 1번컨텐츠 ****************/
+/* 큰 이미지 박스*/
+.big_img {
+    /* width: 456px; */
+    /* height: 96.5%; */
+    position: absolute;
+    top: -2.5%;
+    overflow: hidden;
+    width: 23.8vw;
+    height: 31vw;
+    transition: transform 0.3s cubic-bezier(0, 0, 0, 1) 0s;
+}
+
+/* 큰 이미지 */
+.img_size {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transform: none;
+}
+
+
+/* 작은 이미지 박스 */
+.small_img {
+    transform: translateY(150px);
+    height: 15.5vw;
+    width: 12vw;
+    position: absolute;
+    right: 0px;
+    transition: transform 0.3s cubic-bezier(0, 0, 0, 1) 0s;
+}
+
+
+/* 이미지박스 오른쪽 작은 부분 이동*/
+.imrs {
+    left: 60%;
+    bottom: -11%;
+}
+
+.img4 .imrs {
+    left: 48%;
+    bottom: -7%;
+}
+
+
+/* 이미지박스 오른쪽 작은 부분 이동*/
+.imls {
+    left: 60%;
+    bottom: -6%;
+}
+
+
+
+/* 텍스트 영역 */
+.text_area {
+    width: 436px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+
+}
+
+/* 글이 왼쪽일 때 */
+.loch_l {
+    left: 20%;
+}
+
+/* 글이 오른쪽일 때 */
+.loch_r {
+    left: 5%;
+}
+
+
+
+/* 텍스트 영역 제목 */
+.text_area h3 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* 텍스트 영역 내용 */
+.text_area p {
+    margin-bottom: 1rem;
+}
+
+
+
+/******************** 컨텐츠 내용 종료 ********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Sawmmill 소개글*/
+.cont7 {
+    box-sizing: border-box;
+    padding: 128px 0;
+}
+
+.no {}
+
+
+
+/* 메인 비주얼 미디어쿼리 */
+@media screen and (max-width: 990px) {
+
+    .ourpro_li:nth-child(2) > a {
+        padding: 0;
+    }
+
+    .main_video_text_box h1 {
+        margin-bottom: 3%;
+    }
+
+    .page {
+        margin-bottom: 50px;
+    }
+
+    .ban {
+        height: auto;
+    }
+
+    .main_video_area {
+        height: 100vh;
+        max-height: 800px;
+    }
+
+    .main_video_area video {
+        display: none;
+    }
+
+    .main_video_text_box {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 2%;
+
+    }
+
+
+
+    #ani {
+        display: block;
+    }
+
+    .our_pro {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .our_pro > li {
+        margin: 0 auto;
+        margin-bottom: 5%;
+
+    }
+
+    .our_pro li:nth-child(1)::after {
+        display: none;
+    }
+
+    .our_pro li:last-child {
+        margin-bottom: 0;
+    }
+
+    .ourpro_li > a {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .our_pro > li > h4 {
+        margin: 0 auto;
+    }
+
+    .ourpro_img1,
+    .ourpro_img2,
+    .ourpro_img3 {
+        margin: 0 auto;
+    }
+
+    .ourpro_1 > span,
+    .ourpro_2 > span,
+    .ourpro_3 > span {
+        text-align: extracted1;
+    }
+
+    .ourpro_img1 img,
+    .ourpro_img2 img,
+    .ourpro_img3 img {
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+
+    /*공통가로*/
+
+    .flex_box,
+    flex_box.reverse {
+        flex-direction: column;
+
+    }
+
+    .text_divi {
+        width: 63.6vw;
+        padding: 0 3%;
+        /*background-color: beige;*/
+        box-sizing: border-box;
+        margin-bottom: 7%;
+    }
+
+    .img_divi {
+        width: 71vw;
+    }
+
+
+    .imls,
+    .imrs {
+        display: none;
+    }
+
+
+
+    .img1 .big_img lmlb,
+    .img2 .big_img lmrb,
+    .img3 .big_img lmlb,
+    .img4 .big_img lmrb {
+        width: 55vw;
+        transform: none;
+        top: 0;
+        position: relative;
+        left: 0;
+    }
+
+    .img1 .big_img,
+    .img2 .big_img,
+    .img3 .big_img,
+    .img4 .big_img {
+        width: 59.6vw;
+        height: 52.6vw;
+        position: static;
+        top: 0;
+        margin: 0 auto;
+    }
+
+    .img1 .big_img img,
+    .img2 .big_img img,
+    .img3 .big_img img,
+    .img4 .big_img img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        transform: none;
+
+    }
+
+    .text_area {
+        width: 100%;
+        top: 50%;
+    }
+
+    .loch_r,
+    .loch_l {
+        left: 0;
+    }
+
+    .divi {
+        margin: 0;
+    }
+
+
+    .flex_box.reverse,
+    .flex_box {
+        height: auto;
+        padding: 80px 128px;
+        box-sizing: border-box;
+        margin: 10px 0;
+
+    }
+
+
+    .flex_box.reverse .text_area,
+    .flex_box .text_area {
+        transform: none;
+    }
+
+    .flex_box.reverse .text_area h3,
+    .flex_box .text_area h3 {
+        font-size: 3rem;
+    }
+
+    .out_img,
+    .pro_out_img1,
+    .pro_out_img2,
+    .pro_out_img3,
+    .pro_out_img4 {
+        display: inline;
+    }
+
+    .ourpro_img1 img,
+    .ourpro_img2 img,
+    .ourpro_img3 img {
+        margin-right: 0;
+        transform: none;
+
+    }
+
+
+
+    @media screen and (max-width: 767px) {
+        .page {
+            margin-bottom: 0;
+            padding-top: 0;
+            height: auto;
+
+        }
+
+        .main_video_text_box {
+            width: 100%;
+        }
+
+        .our_pro > li {
+            padding: 24px 0;
+        }
+
+        .ourpro_1 > span,
+        .ourpro_2 > span,
+        .ourpro_3 > span {
+            white-space: pre
+        }
+
+        .our_pro > li > h4 {
+            font-size: 2.85vw;
+        }
+
+
+        .main_video_area {
+            height: 100vh;
+        }
+
+        .main_video_text_box {
+            width: 100%;
+        }
+
+        .main_video_text_box h1 {
+            font-size: 3.1rem;
+        }
+
+        .big_img {
+            width: 53.5vw;
+            height: 55.8vw;
+        }
+
+        .big_img img {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .flex_box.reverse,
+        .flex_box {
+            padding: 0;
+
+        }
+
+        .backgroud_box {
+            padding: 10vw 0;
+        }
+
+
+        .text_divi {
+
+            width: 87vw;
+            padding: 0px 14% 0 14%;
+            box-sizing: border-box;
+        }
+
+
+
+        .view_all .combtn_txt {
+            margin-right: 11px;
+        }
+
+        .flex_box.reverse .text_area h3,
+        .flex_box .text_area h3 {
+            font-size: 5.75vw;
+        }
+
+
+        .big_img {
+            width: 53.46vw;
+            height: 56.2vw;
+        }
+
+        .text_area p {
+            margin-bottom: 0.5rem;
+        }
+
+        .ban_shortcuts_box .combtn {
+            margin-left: 0;
+            transform: none;
+            margin-right: 5%;
+        }
+
+
+
+        .flex_box.reverse .text_area,
+        .flex_box .text_area {
+            transform: none;
+            margin-bottom: 5%;
+        }
+
+        .our_pro li:last-child {
+            width: auto;
+        }
+    }
+
+    @media screen and (max-width: 456px) {
+        .main_video_text_box {
+            width: 100%;
+        }
+
+        .flex_box.reverse .text_area h3,
+        .flex_box .text_area h3 {
+            font-size: 7.75vw;
+        }
+
+        .main_video_text_box h1 {
+            font-size: 8.5vw;
+
+        }
+
+        .ban_shortcuts_box .combtn {}
+
+
+        .text_divi {
+            padding: 0;
+        }
+
+        .flex_box.reverse,
+        .flex_box {
+            padding: 0 8%;
+        }
+
+        .img1 .big_img,
+        .img2 .big_img,
+        .img3 .big_img,
+        .img4 .big_img {
+
+            width: 70.2vw;
+            height: 85.6vw;
+        }
+
+        .flex_box.reverse .text_area,
+        .flex_box .text_area {
+            box-sizing: border-box;
+            transform: none;
+            margin-bottom: 5%;
+            padding: 0px 8vw;
+        }
+
+    }
